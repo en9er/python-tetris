@@ -64,21 +64,9 @@ class Piece:
         self.rotate_random_times()
         self.position_X = 0
         self.position_Y = 0
-
-    def move_right(self):
-        self.position_X += 1
-
-    def move_left(self):
-        self.position_X -= 1
-
-    def move_down(self):
-        self.position_Y -= 1
-
-    def get_relative_coordinates(self):
-        r_pos = []
+        self.piece_coords = []
         for i in range(Piece.size):
             for j in range(Piece.size):
                 if self.shape[i][j] == '*':
-                    r_pos.append([i, j])
-        print(r_pos)
-        return r_pos
+                    self.piece_coords.append([i, j])
+
